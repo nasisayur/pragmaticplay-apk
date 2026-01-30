@@ -65,8 +65,6 @@ export async function onRequest({ params }) {
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-<script async custom-element="amp-img"
-  src="https://cdn.ampproject.org/v0/amp-img-0.1.js"></script>
 
 <style amp-boilerplate>
 body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
@@ -139,6 +137,10 @@ li{margin-bottom:6px}
 <h1>${NAME} APK</h1>
 <div class="meta">Versi ${version} · ${size} · Android</div>
 
+<a class="btn" href="https://pragmaticplay.co.in/">
+DOWNLOAD APK
+</a>
+
 <div class="card">
 <p>
 ${NAME} APK versi terbaru merupakan aplikasi Android yang ${desc}.
@@ -158,9 +160,7 @@ pengguna yang stabil serta cepat.
 </ul>
 </div>
 
-<a class="btn" href="https://pragmaticplay.co.in/">
-DOWNLOAD APK
-</a>
+
 
 <div class="card">
 <p>
