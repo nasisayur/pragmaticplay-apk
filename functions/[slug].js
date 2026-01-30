@@ -56,7 +56,7 @@ export async function onRequest({ params }) {
 
   /* ===== HTML AMP ===== */
   const html = `<!doctype html>
-<html ⚡ lang="id">
+<html amp lang="id">
 <head>
 <meta charset="utf-8">
 <title>${TITLE}</title>
@@ -69,13 +69,26 @@ export async function onRequest({ params }) {
   src="https://cdn.ampproject.org/v0/amp-img-0.1.js"></script>
 
 <style amp-boilerplate>
-body{visibility:hidden}
+body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+animation:-amp-start 8s steps(1,end) 0s 1 normal both}
+@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
 </style>
+
 <noscript>
 <style amp-boilerplate>
-body{visibility:visible}
+body{-webkit-animation:none;
+-moz-animation:none;
+-ms-animation:none;
+animation:none}
 </style>
 </noscript>
+
 
 <script type="application/ld+json">
 ${JSON.stringify(schema)}
